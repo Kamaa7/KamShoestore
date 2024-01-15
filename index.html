@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your website description goes here">
+  <meta name="keywords" content="your, keywords, go, here">
+  <meta name="author" content="kamstore">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #000, #1a1a1a);
+      color: #ff4747;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(to right, #1a1a1a, #000);
+    }
+
+    header a {
+      color: #ff4747;
+    }
+
+    button {
+      background-color: #ff4747;
+      border: none;
+      padding: 10px 20px;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #ff3333;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      background-color: #1a1a1a;
+      padding: 50px 0;
+    }
+
+    .hero h1 {
+      color: #ff4747;
+    }
+
+    .hero p {
+      color: #fff;
+    }
+
+    /* Stats Section Styles */
+    .stats {
+      background-color: #1a1a1a;
+      padding: 50px 0;
+    }
+
+    .stats h2 {
+      color: #ff4747;
+    }
+
+    /* About Section Styles */
+    .about {
+      background-color: #1a1a1a;
+      padding: 50px 0;
+    }
+
+    .about h2 {
+      color: #ff4747;
+    }
+
+    /* Contact Section Styles */
+    .contact {
+      background-color: #1a1a1a;
+      padding: 50px 0;
+    }
+
+    .contact h1,
+    .contact a {
+      color: #ff4747;
+    }
+
+    .contact button {
+      background-color: #ff4747;
+      border-color: #ff4747;
+    }
+
+    /* Form Styles */
+    label {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background-color: #1a1a1a;
+      border: 1px solid #ff4747;
+      color: #ff4747;
+      border-radius: 5px;
+    }
+
+    input:focus,
+    textarea:focus {
+      border: 1px solid #ff3333;
+    }
+  </style>
+  <script>
+    function handleButtonClick(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+
+<body class="font-sans">
+
+  <!-- Header Section -->
+  <header id="headerSection" class="bg-black text-light-red body-font shadow-lg">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <span class="kamstore-logo">KamStore</span>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a href="#" onclick="handleButtonClick('heroSection')" class="mr-5 hover:text-light-red">Home</a>
+        <a href="#" onclick="handleButtonClick('statsSection')" class="mr-5 hover:text-light-red">About</a>
+        <a href="#" onclick="handleButtonClick('contactSection')" class="mr-5 hover:text-light-red">Contact</a>
+      </nav>
+      <button onclick="handleButtonClick('headerSection')" class="inline-flex items-center bg-light-red text-black border-0 py-1 px-3 focus:outline-none hover:bg-light-red-dark rounded text-base mt-4 md:mt-0">Button
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="heroSection" class="hero text-white body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-5xl text-4xl mb-4 font-medium">Dark Jeans and Nikes
+          <br class="hidden lg:inline-block">Tap on with Nike
+        </h1>
+        <p class="mb-8 leading-relaxed">Explore our carefully curated selection of Nike sneakers, ranging from iconic classics to cutting-edge designs. Immerse yourself in a shopping experience that showcases the perfect blend of comfort, durability, and trendsetting style. Whether you're a dedicated athlete, a street-style enthusiast, or someone who appreciates the fusion of fashion and function, we have the perfect pair for you.</p>
+        <div class="flex justify-center">
+          <button onclick="handleButtonClick('statsSection')" class="inline-flex text-black bg-light-red-lighter border-0 py-2 px-6 focus:outline-none hover:bg-light-red-dark rounded text-lg">Explore Now</button>
+        </div>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="Nike Shoes" src="https://source.unsplash.com/720x600/?shoe,nike">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="statsSection" class="stats text-light-red body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-5xl text-4xl">2.7K</h2>
+          <p class="leading-relaxed">Users</p>
+        </div>
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-5xl text-4xl">1.8K</h2>
+          <p class="leading-relaxed">Subscribers</p>
+        </div>
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-5xl text-4xl">35</h2>
+          <p class="leading-relaxed">Downloads</p>
+        </div>
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-5xl text-4xl">4</h2>
+          <p class="leading-relaxed">Products</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="aboutSection" class="about text-light-red body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 sm:w-full w-full">
+          <h2 class="title-font font-medium sm:text-5xl text-4xl mb-4">About Us</h2>
+          <p class="leading-relaxed text-lg mb-8">
+            Welcome to KamStore, where passion meets fashion. At KamStore, we are not just selling shoes; we are curators of style and enthusiasts of innovation. Our journey began with a simple idea - to provide a platform where sneaker lovers can explore, experience, and embrace the world of Nike sneakers like never before.
+          </p>
+          <p class="leading-relaxed text-lg mb-8">
+            Our mission is to redefine the way you perceive footwear. We believe that your shoes are more than just an accessory; they are an extension of your personality. That's why, at KamStore, we meticulously curate a collection that goes beyond trends, offering you timeless classics and cutting-edge designs that stand the test of time.
+          </p>
+          <p class="leading-relaxed text-lg mb-8">
+            What sets us apart is our commitment to quality, authenticity, and customer satisfaction. Each pair of shoes at KamStore undergoes a stringent selection process to ensure that you receive nothing but the best. We collaborate with Nike, a brand synonymous with excellence, to bring you a diverse range that caters to various tastes and preferences.
+          </p>
+          <p class="leading-relaxed text-lg mb-8">
+            Our team comprises dedicated individuals who share a passion for sneakers and a commitment to delivering an unparalleled shopping experience. We are not just a store; we are a community of sneaker enthusiasts, and we invite you to be a part of it. Explore our website, discover the stories behind each pair, and join us on a journey where fashion and passion intersect.
+          </p>
+          <p class="leading-relaxed text-lg mb-8">
+            Thank you for choosing KamStore. Step into style, step into comfort, step into the world of Nike like never before.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Contact Section -->
+  <section id="contactSection" class="contact text-light-red body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-4xl text-3xl font-medium title-font mb-4">Contact Us</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">╔═══════════════════════════════════════╗
+            </p>
+      </div>
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="name" class="leading-7 text-sm text-light-red">Name</label>
+              <input type="text" id="name" name="name" class="w-full bg-black bg-opacity-50 rounded border border-light-red focus:border-light-red focus:bg-white focus:ring-2 focus:ring-light-red text-base outline-none text-light-red py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-light-red">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-black bg-opacity-50 rounded border border-light-red focus:border-light-red focus:bg-white focus:ring-2 focus:ring-light-red text-base outline-none text-light-red py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="message" class="leading-7 text-sm text-light-red">Message</label>
+              <textarea id="message" name="message" class="w-full bg-black bg-opacity-50 rounded border border-light-red focus:border-light-red focus:bg-white focus:ring-2 focus:ring-light-red h-32 text-base outline-none text-light-red py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <button onclick="handleButtonClick('headerSection')" class="flex mx-auto text-black bg-light-red-lighter border-0 py-2 px-8 focus:outline-none hover:bg-light-red-dark rounded text-lg">Send Message</button>
+          </div>
+          <div class="p-2 w-full pt-8 mt-8 border-t border-light-red text-center">
+            <a class="text-light-red">kam.store@email.com</a>
+            <p class="leading-normal my-5">49 Smith St.
+              <br>Saint Cloud, MN 56301
+            </p>
+            <span class="inline-flex">
+              <a class="text-light-red">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-light-red">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M22 2a2 2 0 00-2 2v14a2 2 0 01-2 2H6.3a1 1 0 00-.71.29L2 21l1.7-5.12a1 1 0 00-.27-.94L3 14l-1.74-1.74a1 1 0 00-.94-.26L2 12l-1.7-5.12A1 1 0 00-.29 6H2a2 2 0 012-
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </body>
+
+    </html>
